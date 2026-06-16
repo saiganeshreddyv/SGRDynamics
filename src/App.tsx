@@ -97,7 +97,7 @@ function App() {
       if (error) throw error;
 
       try {
-        await fetch("/api/sendLead", {
+        await fetch("https://bot.sgrdynamics.com/webhook-test/lead-form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
