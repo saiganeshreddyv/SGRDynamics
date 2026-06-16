@@ -36,7 +36,8 @@ function App() {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const WEBHOOK_URL = "http://43.204.230.165:5678/webhook/b6efb0e3-fde4-469e-b1c2-6b997603cf1b/chat";
+  const WEBHOOK_URL =
+  "https://bot.sgrdynamics.com/webhook/b6efb0e3-fde4-469e-b1c2-6b997603cf1b/chat";
   const [formData, setFormData] = useState({
     full_name: "",
     email: "",
@@ -96,7 +97,7 @@ function App() {
       if (error) throw error;
 
       try {
-        await fetch("/api/sendlead", {
+        await fetch("/api/sendLead", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -227,34 +228,6 @@ function App() {
       bullets: ["LLM RAG Pipelines", "Custom n8n Nodes", "AI-Powered Integrations"],
     },
   ];
-
-  // const reviews = [
-  //   {
-  //     quote: "Working with SGR Dynamics was straightforward and professional. They delivered exactly what we needed and were responsive throughout the project.",
-  //     name: "Rahul K.",
-  //     avatar: "bg-primary-container",
-  //   },
-  //   {
-  //     quote: "The team helped us modernize our website and improve the overall user experience. The final product was clean, fast, and easy to manage.",
-  //     name: "Priya S.",
-  //     avatar: "bg-secondary-container",
-  //   },
-  //   {
-  //     quote: "Their automation solution reduced a lot of manual work for our team. The implementation was smooth and the results were noticeable within weeks.",
-  //     name: "Vikram R.",
-  //     avatar: "bg-tertiary-container",
-  //   },
-  //   {
-  //     quote: "Communication was clear from start to finish. They understood our requirements quickly and delivered the project on schedule.",
-  //     name: "Anjali M.",
-  //     avatar: "bg-primary-container",
-  //   },
-  //   {
-  //     quote: "We appreciated their attention to detail and problem-solving approach. The software they built has become an important part of our daily operations.",
-  //     name: "Karthik P.",
-  //     avatar: "bg-secondary-container",
-  //   },
-  // ];
 
   const faqCategories = [
     {
@@ -660,50 +633,6 @@ function App() {
 
   </div>
 </section>
-
-        {/* Reviews
-        <section id="reviews" className="py-32 bg-surface-container-low dark:bg-slate-deep/30 transition-colors">
-          <div className="px-margin-desktop max-w-container-max mx-auto">
-            <h2 className="font-label-md text-label-md text-coral-vibrant uppercase tracking-widest mb-12 text-center">03 / CLIENT TRANSMISSIONS</h2>
-            <div className="overflow-hidden relative">
-              <div className="flex gap-8 animate-marquee w-max">
-                {[...reviews, ...reviews].map((r, index) => (
-                  <div
-                    key={`${r.name}-${index}`}
-                    className="w-[420px] flex-shrink-0 p-8 glass-card rounded-3xl text-left relative"
-                  >
-                    <Icon
-                      name="format_quote"
-                      className="!text-4xl text-coral-vibrant absolute top-8 right-8 opacity-20"
-                    />
-                    <div className="flex gap-1 mb-4">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Icon
-                          key={i}
-                          name="star"
-                          fill
-                          className="!text-base text-peach-glow"
-                        />
-                      ))}
-                    </div>
-                    <p className="font-body-md text-body-md mb-8 italic text-on-surface dark:text-[#f5f0ed] leading-relaxed">
-                      "{r.quote}"
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-full ${r.avatar}`} />
-                      <div>
-                        <span className="block font-label-md text-label-md font-bold">
-                          {r.name}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         {/* Project Engagement */}
         <section className="py-32 px-margin-desktop max-w-container-max mx-auto">
           <h2 className="font-label-md text-label-md text-coral-vibrant uppercase tracking-widest mb-6 text-center">
