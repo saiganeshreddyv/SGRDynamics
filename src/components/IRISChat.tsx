@@ -6,7 +6,7 @@ export default function IRISChat() {
   useEffect(() => {
     createChat({
       webhookUrl:
-        "http://43.204.230.165:5678/webhook/b6efb0e3-fde4-469e-b1c2-6b997603cf1b/chat",
+        "https://bot.sgrdynamics.com/webhook/b6efb0e3-fde4-469e-b1c2-6b997603cf1b/chat",
 
       mode: "window",
 
